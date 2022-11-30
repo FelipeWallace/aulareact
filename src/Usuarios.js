@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import imgEdit from "./images/imgEdit.ico"
+import "./Usuarios.css"
 
 export default function Usuarios() {
   const [usuarios, setUsuarios] = useState([]);
@@ -91,9 +92,7 @@ export default function Usuarios() {
 
   return (
     <div>
-      <button type="button" onClick={novosDados}>
-        Novo
-      </button>
+      <button type="button" onClick={novosDados}>Novo</button>
       {tipo ? (
         <>
           <input
@@ -112,12 +111,8 @@ export default function Usuarios() {
               setEmail(e.target.value);
             }}
           />
-          <button type="button" onClick={limparDados}>
-            Cancelar
-          </button>
-          <button type="button" onClick={gravaDados}>
-            Gravar
-          </button>
+          <button type="button" onClick={limparDados}>Cancelar</button>
+          <button type="button" onClick={gravaDados}>Gravar</button>
         </>
       ) : (
         false
@@ -126,9 +121,8 @@ export default function Usuarios() {
         ? usuarios.map((item) => {
             return (
               <div key={item.id}>
-                <div>
-                  {" "}
-                  {item.id} - {item.nome} - {item.email}{" "}
+                <div className="linha">
+                  {item.id} - {item.nome} - {item.email}
                   <img
                     alt="Editar"
                     src={imgEdit}

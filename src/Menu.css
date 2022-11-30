@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #282c34;
+    height: 50px;
+}
+
+.navbar {
+    text-decoration: none;
+    color: white;
+    transition: 2s;
+}
+
+.navbar:hover{
+    color: antiquewhite;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    float: left;
+    padding: 10px;
+}cls
